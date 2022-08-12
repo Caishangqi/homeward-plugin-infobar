@@ -1,0 +1,12 @@
+name: HomewardInfoBar
+version: '${version}'
+main: homeward.plugin.homewardinfobar.HomewardInfoBar
+api-version: 1.18
+prefix: HInfoBar
+authors: [ Caizii ]
+description: A BossBar like infomation HUD that show location and other information
+website: play.homeward.com
+depend:
+  - Homewardlib
+softdepend:
+  - PlaceholderAPI
