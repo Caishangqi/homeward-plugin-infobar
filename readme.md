@@ -1,4 +1,4 @@
-# Homeward Lib (Hlib)
+# Homeward InfoBar
 
 <p align="center">
 <img src = "https://user-images.githubusercontent.com/39553613/145566584-494920e6-bdac-4c23-985d-9d00187c90e1.jpg">
@@ -23,6 +23,10 @@ Homeward InfoBar
 [//]: # (  <img alt="cookingpot" src="https://user-images.githubusercontent.com/39553613/180586916-6fa340a1-f8c6-4fc4-ad34-d56a5e707ee8.gif">)
 
 [//]: # (</p>)
+## 前置
+
+- [Homeward Libs 协调核心](https://github.com/Caishangqi/homeward-plugin-lib) `必要`
+- [PlaceHolderAPI](https://github.com/PlaceholderAPI/PlaceholderAPI) `可选`
 
 ## 指令
 
