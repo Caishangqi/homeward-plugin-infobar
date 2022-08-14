@@ -1,0 +1,1151 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        " ": 4,
+        "‌": 0
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "minecraft:font/ascii.png",
+      "ascent": 3,
+      "height": 8,
+      "chars": [
+        "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        " !\"#$%&'()*+,-./",
+        "0123456789:;<=>?",
+        "@ABCDEFGHIJKLMNO",
+        "PQRSTUVWXYZ[\\]^_",
+        "`abcdefghijklmno",
+        "pqrstuvwxyz{|}~\u0000",
+        "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000",
+        "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000£\u0000\u0000ƒ",
+        "\u0000\u0000\u0000\u0000\u0000\u0000ªº\u0000\u0000¬\u0000\u0000\u0000«»",
+        "░▒▓│┤╡╢╖╕╣║╗╝╜╛┐",
+        "└┴┬├─┼╞╟╚╔╩╦╠═╬╧",
+        "╨╤╥╙╘╒╓╫╪┘┌█▄▌▐▀",
+        "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000∅∈\u0000",
+        "≡±≥≤⌠⌡÷≈°∙\u0000√ⁿ²■\u0000"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_end.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈁ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_center_1.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈂ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_center_2.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈃ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_center_4.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈄ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_center_8.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈅ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_center_16.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈆ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_center_32.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈇ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_center_64.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈈ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/background_center_128.png",
+      "ascent": 6,
+      "height": 14,
+      "chars": [
+        "ꈉ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/clock_icon.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀁"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/waypoint_icon.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀂"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/hourglass_icon.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀃"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/lives_icon.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀄"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/objective_icon.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀅"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/keys_icon.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀆"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/keys_icon_off.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀇"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/boss_keys_icon.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀈"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/boss_keys_icon_off.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀉"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/exit_icon.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀊"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/boss_bar/task_icons.png",
+      "ascent": 4,
+      "height": 10,
+      "chars": [
+        "뀋뀌뀍뀎"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/role_visitor.png",
+      "ascent": 3,
+      "height": 7,
+      "chars": [
+        "ꑗ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/role_resident.png",
+      "ascent": 3,
+      "height": 7,
+      "chars": [
+        "ꑘ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/role_trusted.png",
+      "ascent": 3,
+      "height": 7,
+      "chars": [
+        "ꑙ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/role_owner.png",
+      "ascent": 3,
+      "height": 7,
+      "chars": [
+        "ꑚ"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_00.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "退"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_01.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "送"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_02.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "适"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_03.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逃"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_04.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逄"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_05.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逅"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_06.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逆"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_07.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逇"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_08.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逈"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_09.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "选"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_10.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逊"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_11.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逋"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_12.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逌"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_13.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逍"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_14.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逎"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_15.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "透"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_16.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逐"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_17.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逑"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_18.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "递"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_19.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逓"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_20.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "途"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_21.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逕"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_22.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逖"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_23.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逗"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_24.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逘"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_25.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "這"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_26.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "通"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_27.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逿"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_28.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逛"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_29.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逜"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_30.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逝"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_31.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逞"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_32.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "速"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_33.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "造"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_34.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逡"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_35.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逢"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_36.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "連"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_37.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逤"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_38.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逥"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_39.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逦"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_40.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逧"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_41.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逨"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_42.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逩"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_43.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逪"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_44.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逫"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_45.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逬"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_46.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逭"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_47.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逮"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_48.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逯"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_49.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逰"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_50.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "週"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_51.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "進"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_52.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逳"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_53.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逴"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_54.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逵"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_55.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逶"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_56.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逷"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_57.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逸"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_58.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逹"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_59.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逺"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_60.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逻"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_61.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逼"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_62.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逽"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "item/clock_63.png",
+      "ascent": 6,
+      "height": 16,
+      "chars": [
+        "逾"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_00.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄀"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_01.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄁"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_02.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄂"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_03.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄃"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_04.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄄"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_05.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄅"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_06.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄆"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_07.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄇"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_08.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄈"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_09.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄉"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_10.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄊"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_11.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄋"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_12.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄌"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_13.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄍"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_14.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄎"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_15.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄏"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_16.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄐"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_17.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄑"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_18.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄒"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_19.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄓"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_20.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄔"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_21.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄕"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_22.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄖"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_23.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄗"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_24.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄘"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_25.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄙"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_26.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄚"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_27.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄿"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_28.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄛"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_29.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄜"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_30.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄝"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_31.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄞"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/compass/compass_empty.png",
+      "ascent": 9,
+      "height": 16,
+      "chars": [
+        "鄟"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/ui_tutorial.png",
+      "ascent": -7,
+      "height": 256,
+      "chars": [
+        "솶"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/badges/icons.png",
+      "ascent": 10,
+      "height": 16,
+      "chars": [
+        "쉇쉈쉉쉊"
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/badges/exp_bar.png",
+      "ascent": 4,
+      "height": 8,
+      "chars": [
+        "숿"
+      ]
+    }
+  ]
+}

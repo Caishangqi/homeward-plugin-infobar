@@ -1,9 +1,10 @@
 package homeward.plugin.homewardinfobar.compatibilities;
 
+import com.caizi.compatibilities.enumerate.BaseCompatiblePlugin;
 import homeward.plugin.homewardinfobar.compatibilities.provided.MinecraftCompatibility;
 import org.bukkit.event.Listener;
 
-public enum CompatibilityList {
+public enum CompatibilityList implements BaseCompatiblePlugin {
 
     MINECRAFT("Minecraft", true, MinecraftCompatibility.class);
 
@@ -39,7 +40,7 @@ public enum CompatibilityList {
 
     }
 
-    public Boolean getNative() {
+    public boolean getNative() {
         return isNative;
     }
 

@@ -1,19 +1,22 @@
 package homeward.plugin.homewardinfobar;
 
+import com.caizi.compatibilities.CompatibilityManager;
 import com.caizi.mf.base.CommandManager;
 import com.caizi.utils.logs.ConsoleLogger;
 import com.caizi.utils.logs.CustomLogger;
 import com.caizi.utils.logs.LoggerManipulationType;
 import homeward.plugin.homewardinfobar.command.HInfoCommand;
-import homeward.plugin.homewardinfobar.compatibilities.CompatibilityManager;
+import homeward.plugin.homewardinfobar.compatibilities.CompatibilityList;
 import homeward.plugin.homewardinfobar.compatibilities.provided.MinecraftCompatibility;
 import homeward.plugin.homewardinfobar.hud.HUDManager;
 import homeward.plugin.homewardinfobar.scheduler.OnTickScheduler;
+import homeward.plugin.homewardinfobar.util.hudmanipulation.HUDManipulation;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class HomewardInfoBar extends JavaPlugin {
 
+    ///tellraw Caizii {"text":"ꈆ","font":"boss_bar_1"}
     private static CommandManager commandManager;
 
     public static CompatibilityManager compatibilityManager;
@@ -34,12 +37,18 @@ public final class HomewardInfoBar extends JavaPlugin {
         registerCommands();
         loadConfigurations();
         initializeHUDManager();
+        displayHUDForPlayer();
         loadingScheduler();
+    }
+
+    private void displayHUDForPlayer() {
+        HUDManipulation.displayHUDForPlayer();
     }
 
     private void initializeHUDManager() {
         consoleLogger.send(LoggerManipulationType.LOAD, "&7加载初始化的HUD管理器");
         hudManager = HUDManager.INSTANCE;
+        HUDManipulation.loadDisplayPriority();
     }
 
     private void registerCommands() {
@@ -48,7 +57,7 @@ public final class HomewardInfoBar extends JavaPlugin {
     }
 
     private void loadCompatibility() {
-        compatibilityManager = new homeward.plugin.homewardinfobar.compatibilities.CompatibilityManager(this, consoleLogger, MinecraftCompatibility.class);
+        compatibilityManager = new CompatibilityManager(this, consoleLogger, MinecraftCompatibility.class, CompatibilityList.values());
     }
 
     private void loadConfigurations() {
@@ -71,6 +80,9 @@ public final class HomewardInfoBar extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         consoleLogger.send(LoggerManipulationType.UNLOAD, "关闭 " + this.getName() + " 中...");
+
+        HUDManipulation.hiddenDisplayHUDForPlayer();
+
     }
 
     public static HomewardInfoBar getInstance() {

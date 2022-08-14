@@ -2,13 +2,13 @@ version: 1.0.0
 general-setting:
   auto-enable-hud: true
   auto-download-basic-papi-expansion: false
-  display-priority-type: plugin
+  display-priority-type: placeholder
 display-priority-by-plugin:
   - PerWorldPlayer
   - Dungeons
   - WorldGuard
   - World
 display-priority-by-placeholder:
-  - %dungeons%
-  - %worldguard_region_name%
-  - %player_world%
+  - "%dungeons%"
+  - "%worldguard_region_name%"
+  - "%player_world%"

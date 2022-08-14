@@ -10,8 +10,10 @@ public class HUDManager {
     public static final HUDManager INSTANCE = new HUDManager();
 
     private HashMap<Player, InfoHUD> HUDPool = new HashMap<>();
+    private DisplayPriority displayPriority;
 
-    private HUDManager() {}
+    private HUDManager() {
+    }
 
     public HashMap<Player, InfoHUD> getHUDPool() {
         return HUDPool;
@@ -19,5 +21,13 @@ public class HUDManager {
 
     public void setHUDPool(HashMap<Player, InfoHUD> HUDPool) {
         this.HUDPool = HUDPool;
+    }
+
+    public DisplayPriority getDisplayPriority() {
+        return displayPriority;
+    }
+
+    public void setDisplayPriority(DisplayPriority displayPriority) {
+        this.displayPriority = displayPriority;
     }
 }

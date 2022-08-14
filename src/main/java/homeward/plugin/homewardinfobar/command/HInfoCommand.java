@@ -8,6 +8,7 @@ import com.caizi.mf.base.CommandBase;
 import homeward.plugin.homewardinfobar.HomewardInfoBar;
 import homeward.plugin.homewardinfobar.bossbar.InfoHUD;
 import net.kyori.adventure.audience.Audience;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -35,5 +36,22 @@ public class HInfoCommand extends CommandBase {
         }
 
     }
+
+    @SubCommand("showsequence")
+    public void showsequence(final CommandSender commandSender) {
+        HomewardInfoBar.customLogger.send(HomewardInfoBar.hudManager.getDisplayPriority().toString(), (Player) commandSender);
+    }
+
+    @SubCommand("rawtest")
+    public void rawTest(final CommandSender commandSender) {
+
+
+        TextComponent textComponent = new TextComponent();
+        textComponent.setFont("boss_bar_1");
+        textComponent.setText("ꈈ");
+
+        commandSender.spigot().sendMessage(textComponent);
+    }
+
 
 }

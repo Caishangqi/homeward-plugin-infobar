@@ -37,10 +37,10 @@ public class MinecraftCompatibility extends CompatibilityPlugin<Listener> {
 
     @EventHandler(ignoreCancelled = true)
     public void onPlayerLeave(PlayerQuitEvent event) {
-
         HomewardInfoBar.hudManager.getHUDPool().remove(event.getPlayer());
-
     }
+
+
 
 
 
