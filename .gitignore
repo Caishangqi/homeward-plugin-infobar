@@ -203,3 +203,4 @@ gen
 /gradle/
 /.gitattributes
 !/libs/compile/homeward-plugin-lib-1.0-SNAPSHOT.jar
+/resourcepack/example/

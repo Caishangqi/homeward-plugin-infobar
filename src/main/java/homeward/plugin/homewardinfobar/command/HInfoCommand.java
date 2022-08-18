@@ -50,6 +50,8 @@ public class HInfoCommand extends CommandBase {
         textComponent.setFont("boss_bar_1");
         textComponent.setText("ꈈ");
 
+
+
         commandSender.spigot().sendMessage(textComponent);
     }
 

@@ -1,0 +1,634 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -3,
+      "note": "-1px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -4,
+      "note": "-2px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -5,
+      "note": "-3px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -6,
+      "note": "-4px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -7,
+      "note": "-5px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -8,
+      "note": "-6px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -9,
+      "note": "-7px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -10,
+      "note": "-8px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -18,
+      "note": "-16px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -34,
+      "note": "-32px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -66,
+      "note": "-64px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -130,
+      "note": "-128px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -258,
+      "note": "-256px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -514,
+      "note": "-512px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": -1026,
+      "note": "-1024px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32770,
+      "height": -32770,
+      "note": "-infinite",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 0,
+      "note": "1px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 1,
+      "note": "2px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 2,
+      "note": "3px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 3,
+      "note": "4px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 4,
+      "note": "5px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 5,
+      "note": "6px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 6,
+      "note": "7px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 7,
+      "note": "8px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 15,
+      "note": "16px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 31,
+      "note": "32px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 63,
+      "note": "64px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 127,
+      "note": "128px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 255,
+      "note": "256px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 511,
+      "note": "512px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 1023,
+      "note": "1024px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_split.png",
+      "ascent": -32768,
+      "height": 32767,
+      "note": "infinite",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -3,
+      "note": "-1px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -4,
+      "note": "-2px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -5,
+      "note": "-3px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -6,
+      "note": "-4px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -7,
+      "note": "-5px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -8,
+      "note": "-6px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -9,
+      "note": "-7px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -10,
+      "note": "-8px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -18,
+      "note": "-16px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -34,
+      "note": "-32px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -66,
+      "note": "-64px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -130,
+      "note": "-128px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -258,
+      "note": "-256px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -514,
+      "note": "-512px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": -1026,
+      "note": "-1024px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 0,
+      "note": "1px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 1,
+      "note": "2px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 2,
+      "note": "3px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 3,
+      "note": "4px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 4,
+      "note": "5px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 5,
+      "note": "6px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 6,
+      "note": "7px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 7,
+      "note": "8px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 15,
+      "note": "16px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 31,
+      "note": "32px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 63,
+      "note": "64px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 127,
+      "note": "128px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 255,
+      "note": "256px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 511,
+      "note": "512px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 1023,
+      "note": "1024px",
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "custom/ui/pixel_nosplit.png",
+      "ascent": -32768,
+      "height": 32767,
+      "note": "infinite",
+      "chars": [
+        ""
+      ]
+    }
+  ]
+}

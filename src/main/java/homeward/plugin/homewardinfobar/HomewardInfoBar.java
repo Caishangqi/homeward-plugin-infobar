@@ -16,7 +16,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class HomewardInfoBar extends JavaPlugin {
 
-    ///tellraw Caizii {"text":"ꈆ","font":"boss_bar_1"}
+    //ꈁ
+    ///tellraw Caizii {"text":"ꈉ","font":"boss_bar_1"}
     private static CommandManager commandManager;
 
     public static CompatibilityManager compatibilityManager;

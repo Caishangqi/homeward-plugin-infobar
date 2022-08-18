@@ -8,8 +8,12 @@ import net.kyori.adventure.audience.Audience;
 import net.kyori.adventure.bossbar.BossBar;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
-import net.md_5.bungee.api.chat.TextComponent;
+import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.format.Style;
+import net.kyori.adventure.text.format.TextColor;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.map.MapFont;
 import org.jetbrains.annotations.Nullable;
 
 public class InfoHUD {
@@ -20,17 +24,17 @@ public class InfoHUD {
 
         final Component name = Component.text("Awesome BossBar");
         // Creates a red boss bar which has no progress and no notches
-        final BossBar emptyBar = BossBar.bossBar(name, 0, BossBar.Color.RED, BossBar.Overlay.PROGRESS);
+        final BossBar emptyBar = BossBar.bossBar(name, 0, BossBar.Color.YELLOW, BossBar.Overlay.PROGRESS);
         // Creates a green boss bar which has 50% progress and 10 notches
         final BossBar halfBar = BossBar.bossBar(name, 0.5f, BossBar.Color.GREEN, BossBar.Overlay.NOTCHED_10);
         // etc..
         final BossBar fullBar = BossBar.bossBar(name, 1, BossBar.Color.YELLOW, BossBar.Overlay.PROGRESS);
 
         // Send a bossbar to your audience
-        target.showBossBar(fullBar);
+        target.showBossBar(emptyBar);
 
         // Store it locally to be able to hide it manually later
-        this.activeBar = fullBar;
+        this.activeBar = emptyBar.addFlag(BossBar.Flag.CREATE_WORLD_FOG);
     }
 
     public void hideActiveBossBar(final @NonNull Audience target) {
@@ -61,15 +65,31 @@ public class InfoHUD {
             String s = PlaceholderAPI.setPlaceholders(player, papi);
 
             //Test Begin
-            TextComponent textComponent = new TextComponent();
-            textComponent.setFont("boss_bar_1");
-            textComponent.setText("ꈈ");
+            //TextComponent textComponent = new TextComponent();
+            //textComponent.setFont("boss_bar_1");
+            //textComponent.setText("ꈈ");
             //Test End
 
-            Component newText = Component.text(s).append(Component.text("ꈈ"));
-            Key boss_bar_1 = Key.key("boss_bar_1");
+            //fontKey
+            Key boss_bar_2 = Key.key("boss_bar_3");
+            Key aDefault = Key.key("default");
 
-            this.activeBar.name(newText.font(boss_bar_1));
+            //negative space
+            TextComponent negativeSpace = Component.text("");
+            Component negativeSpaceComponent = negativeSpace.font(aDefault);
+
+            //black center""
+            TextComponent blackCenter = Component.text("ꈁ").color(TextColor.color(250,250,0));
+            Component backCenterComponent = blackCenter.font(boss_bar_2);
+
+            //ChatColor.translateAlternateColorCodes('&',"&eꈈ")
+            TextComponent blackCenter2 = Component.text("ꈈ").color(TextColor.color(250,250,0));
+            Component backCenterComponent2 = blackCenter2.font(boss_bar_2);
+
+
+            Component newText = Component.text(s).append(negativeSpaceComponent.append(backCenterComponent.append(negativeSpaceComponent.append(backCenterComponent2))));
+
+            this.activeBar.name(newText);
         }
 
 
