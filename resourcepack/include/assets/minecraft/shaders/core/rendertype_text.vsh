@@ -1,3 +1,87 @@
 #version 150
-#moj_import <fog.glsl>
-in vec3 Position;in vec4 Color;in vec2 UV0;in ivec2 UV2;uniform sampler2D Sampler0,Sampler2;uniform mat4 ModelViewMat,ProjMat;uniform float GameTime;out float vertexDistance;out vec4 vertexColor;out vec2 texCoord0;out float barProgress;out vec3 barColor;out float effect;out vec2 pos;void main(){pos=Position.xy;gl_Position=ProjMat*ModelViewMat*vec4(Position,1.);vertexDistance=cylindrical_distance(ModelViewMat,Position);texCoord0=UV0;barProgress=-1.;barColor=vec3(1.);effect=0.;if(Color.y==254./255.){vertexColor=vec4(1.);barProgress=Color.z;float c=floor(Color.x*255.);if(c==255.)barColor=vec3(226.,166.,70.)/255.;else if(c==254.)barColor=vec3(238.,106.,99.)/255.;else if(c==253.)barColor=vec3(182.,127.,225.)/255.;else if(c==252.)barColor=vec3(104.,213.,88.)/255.;else if(c==251.)barProgress=Color.z+2.;}else if(Color.xyz==vec3(1.,84./255.,1./3.))vertexColor=vec4(vec3(1.,1./3.,1./3.),abs(mod(GameTime*16000.,20.)-10.)/10.);else if(Color.xyz==vec3(254./255.,1.,1.))vertexColor=vec4(1.);else if(Color.xyz==vec3(0.,0.,170.)/255.)vertexColor=vec4(int(floor(max(mod(GameTime*12000.,50.)-46.,0.)))==int(mod(floor(texture(Sampler0,UV0).z*255.),4.)));else if(Color.xyz==vec3(1.,253./255.,1.)){vertexColor=vec4(1.);effect=1.;}else if(Color.xz==vec2(254.,4.)/255.)if(Color.y<=240./255.){vertexColor=vec4(1.);effect=2.+(240./255.-Color.y);vec4 color=texture(Sampler0,UV0);gl_Position=vec4(color.x*2.-1.,color.y*2.-1.,gl_Position.z,1.);texCoord0=color.xy;ivec2 size=textureSize(Sampler0,0);pos=UV0-vec2(color.x,1.-color.y)*(vec2(160.,64.)/size);}else vertexColor=vec4(1.);else if(Color.xz==vec2(63./255.,1./255.))vertexColor=vec4(0.);else vertexColor=Color*texelFetch(Sampler2,UV2/16,0);}
+in vec3 Position;
+in vec4 Color;
+in vec2 UV0;
+in ivec2 UV2;
+
+uniform sampler2D Sampler0,Sampler2;
+uniform mat4 ModelViewMat;
+uniform mat4 ProjMat;
+uniform float GameTime;
+
+out float vertexDistance;
+flat out vec4 vertexColor;
+out vec2 texCoord0;
+
+void main(){
+    vec4 vertex=vec4(Position, 1.0);
+    if(Color.xyz==vec3(255., 255., 254.)/ 255.){
+        //彩虹
+        (gl_Position=ProjMat*ModelViewMat*vertex);
+        (vertexColor=((.6+.6*cos(6.*(gl_Position.x+GameTime*1000.)+vec4(0, 23, 21, 1)))+vec4(0., 0., 0., 1.))*texelFetch(Sampler2, UV2 / 16, 0));
+    }else if(Color.xyz==vec3(255., 255., 253.)/ 255.){
+        //抖动
+        (gl_Position=ProjMat*ModelViewMat*vertex);
+        (vertexColor=Color*texelFetch(Sampler2, UV2 / 16, 0));
+        (gl_Position.y=gl_Position.y+sin(GameTime*12000.+(gl_Position.x*6))/ 150.);
+    }else if(Color.xyz==vec3(255., 255., 252.)/ 255.){
+        //彩虹抖动
+        (gl_Position=ProjMat*ModelViewMat*vertex);
+        (vertexColor=((.6+.6*cos(6.*(gl_Position.x+GameTime*1000.)+vec4(0, 23, 21, 1)))+vec4(0., 0., 0., 1.))*texelFetch(Sampler2, UV2 / 16, 0));
+        (gl_Position.y=gl_Position.y+sin(GameTime*12000.+(gl_Position.x*6))/ 150.);
+    }else if(Color.xyz==vec3(255., 255., 251.)/ 255.){
+        //跳跃
+        (vertexColor=Color*texelFetch(Sampler2, UV2 / 16, 0));
+        float vertexId = mod(gl_VertexID, 4.0);
+        if(vertex.z <= 0.){
+            if(vertexId==3.||vertexId==0.)vertex.y += cos(GameTime*12000. / 4)*0.1;
+            vertex.y += max(cos(GameTime*12000. / 4)*0.1, 0.);
+        }else{
+            if(vertexId==3.||vertexId==0.)vertex.y-=cos(GameTime*12000. / 4)*3;
+            vertex.y-=max(cos(GameTime*12000. / 4)*4, 0.);
+        }
+        (gl_Position=ProjMat*ModelViewMat*vertex);
+    }else if(Color.xyz==vec3(255., 254., 254.)/ 255.){
+        //彩虹跳跃
+        float vertexId = mod(gl_VertexID, 4.0);
+        if(vertex.z <= 0.){
+            if(vertexId==3.||vertexId==0.)vertex.y += cos(GameTime*12000. / 4)*0.1;
+            vertex.y += max(cos(GameTime*12000. / 4)*0.1, 0.);
+        }else{
+            if(vertexId==3.||vertexId==0.)vertex.y-=cos(GameTime*12000. / 4)*3;
+            vertex.y-=max(cos(GameTime*12000. / 4)*4, 0.);
+        }
+        (vertexColor=((.6+.6*cos(6.*(gl_Position.x+GameTime*1000.)+vec4(0, 23, 21, 1)))+vec4(0., 0., 0., 1.))*texelFetch(Sampler2, UV2 / 16, 0));
+        (gl_Position=ProjMat*ModelViewMat*vertex);
+    }else if(Color.xyz==vec3(255., 254., 253.)/ 255.){
+        //重叠
+        (vertexColor=Color*texelFetch(Sampler2, UV2 / 16, 0));
+        vertex.y+= 1;
+        vertex.x+= 1;
+        (gl_Position=ProjMat*ModelViewMat*vertex);
+    }else if(Color.xyz==vec3(255., 254., 250.)/ 255.){
+        //扭捏
+        (gl_Position=ProjMat*ModelViewMat*vertex); 
+        (vertexColor=Color*texelFetch(Sampler2, UV2 / 16, 0));
+        (gl_Position.x=gl_Position.x+sin(GameTime*12000.+(gl_Position.y*6))/ 150.);
+    }else if(Color.xyz==vec3(255., 254., 251.)/ 255.){
+        //呼吸灯
+        (gl_Position=ProjMat*ModelViewMat*vertex); 
+        if (sin(GameTime*1000) > 0){
+            vertexColor=((sin(GameTime*1000)))*texelFetch(Sampler2, UV2 / 16, 0);
+        }else{
+            vertexColor=((-sin(GameTime*1000)))*texelFetch(Sampler2, UV2 / 16, 0);
+        }
+    }else if(Color.xyz==vec3(255., 254., 252.)/ 255.){
+        //移除字
+        (gl_Position=ProjMat*ModelViewMat*vertex); 
+        (vertexColor=Color*texelFetch(Sampler2, UV2 / 16, 0)*(-1));
+    }
+    else{
+        //默认
+        (gl_Position=ProjMat*ModelViewMat*vertex);
+        (vertexColor=Color*texelFetch(Sampler2, UV2 / 16, 0));
+    }
+    vertexDistance=length((ModelViewMat*vertex).xyz);
+    texCoord0=UV0;
+}

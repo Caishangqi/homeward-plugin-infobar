@@ -9,11 +9,8 @@ import net.kyori.adventure.bossbar.BossBar;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
-import net.kyori.adventure.text.format.Style;
 import net.kyori.adventure.text.format.TextColor;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import org.bukkit.map.MapFont;
 import org.jetbrains.annotations.Nullable;
 
 public class InfoHUD {
@@ -71,23 +68,27 @@ public class InfoHUD {
             //Test End
 
             //fontKey
-            Key boss_bar_2 = Key.key("boss_bar_3");
+            Key boss_bar_2 = Key.key("boss_bar_1");
+            Key boss_bar = Key.key("boss_bar_1");
             Key aDefault = Key.key("default");
 
+            //<color:#FFFEFD>
+
             //negative space
-            TextComponent negativeSpace = Component.text("");
-            Component negativeSpaceComponent = negativeSpace.font(aDefault);
+            TextComponent negativeSpace = Component.text("");
+            Component negativeSpaceComponent = negativeSpace.font(aDefault).color(TextColor.color(255, 254, 253));
 
             //black center""
-            TextComponent blackCenter = Component.text("ꈁ").color(TextColor.color(250,250,0));
-            Component backCenterComponent = blackCenter.font(boss_bar_2);
+            TextComponent blackCenter = Component.text("ꈁ").color(TextColor.color(255, 254, 253));
+            Component backCenterComponent = blackCenter.font(boss_bar);
 
             //ChatColor.translateAlternateColorCodes('&',"&eꈈ")
-            TextComponent blackCenter2 = Component.text("ꈈ").color(TextColor.color(250,250,0));
-            Component backCenterComponent2 = blackCenter2.font(boss_bar_2);
+            TextComponent blackCenter2 = Component.text("ꈈ").color(TextColor.color(255, 254, 253));
+            Component backCenterComponent2 = blackCenter2.font(boss_bar);
 
 
-            Component newText = Component.text(s).append(negativeSpaceComponent.append(backCenterComponent.append(negativeSpaceComponent.append(backCenterComponent2))));
+
+            Component newText = backCenterComponent.append(negativeSpaceComponent).append(backCenterComponent2).append(Component.text(s).color(TextColor.color(255, 255, 255)));
 
             this.activeBar.name(newText);
         }
