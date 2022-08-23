@@ -58,6 +58,7 @@ public class InfoHUD {
         }
 
         if (componentToShow != null) {
+
             String papi = componentToShow.getContent() + "  " + "%player_world_time_12%";
             String s = PlaceholderAPI.setPlaceholders(player, papi);
 
@@ -68,7 +69,6 @@ public class InfoHUD {
             //Test End
 
             //fontKey
-            Key boss_bar_2 = Key.key("boss_bar_1");
             Key boss_bar = Key.key("boss_bar_1");
             Key aDefault = Key.key("default");
 
