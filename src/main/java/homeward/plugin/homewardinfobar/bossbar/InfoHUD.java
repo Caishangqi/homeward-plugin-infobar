@@ -62,35 +62,12 @@ public class InfoHUD {
             String papi = componentToShow.getContent() + "  " + "%player_world_time_12%";
             String s = PlaceholderAPI.setPlaceholders(player, papi);
 
-            //Test Begin
-            //TextComponent textComponent = new TextComponent();
-            //textComponent.setFont("boss_bar_1");
-            //textComponent.setText("ꈈ");
-            //Test End
-
-            //fontKey
-            Key boss_bar = Key.key("boss_bar_1");
-            Key aDefault = Key.key("default");
 
             //<color:#FFFEFD>
 
-            //negative space
-            TextComponent negativeSpace = Component.text("");
-            Component negativeSpaceComponent = negativeSpace.font(aDefault).color(TextColor.color(255, 254, 253));
+            Component renderResult = componentToShow.render(player);
 
-            //black center""
-            TextComponent blackCenter = Component.text("ꈁ").color(TextColor.color(255, 254, 253));
-            Component backCenterComponent = blackCenter.font(boss_bar);
-
-            //ChatColor.translateAlternateColorCodes('&',"&eꈈ")
-            TextComponent blackCenter2 = Component.text("ꈈ").color(TextColor.color(255, 254, 253));
-            Component backCenterComponent2 = blackCenter2.font(boss_bar);
-
-
-
-            Component newText = backCenterComponent.append(negativeSpaceComponent).append(backCenterComponent2).append(Component.text(s).color(TextColor.color(255, 255, 255)));
-
-            this.activeBar.name(newText);
+            this.activeBar.name(renderResult);
         }
 
 

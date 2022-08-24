@@ -1,5 +1,9 @@
 package homeward.plugin.homewardinfobar.font;
 
+import net.kyori.adventure.key.Key;
+import net.kyori.adventure.text.Component;
+import net.kyori.adventure.text.TextComponent;
+
 public enum FontBackGround {
 
     END('\ua201'),
@@ -19,7 +23,6 @@ public enum FontBackGround {
     FontBackGround(char character) {
         this.character = character;
     }
-
 
 
     public static String getBackGround(int n) {
@@ -70,4 +73,111 @@ public enum FontBackGround {
         stringBuilder.append(END.character).append(offset);
         return stringBuilder.toString();
     }
+
+    public static Component getBackGround(int n, Key font, Key defaultFont) {
+
+        n += offset_x;
+
+        TextComponent offset = Component.text(FontNegative.getShortestNegChars(n));
+        Component offsetComponent = offset.font(defaultFont);
+
+        //initial
+        TextComponent text = Component.text(END.character);
+        Component component = text.font(font);
+
+        if (n > 128) {
+
+            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+            TextComponent textComponentCenter = Component.text(CENTER_128.character);
+            Component textComponentCenterComponent = textComponentCenter.font(font);
+
+            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+
+            n -= 128;
+        }
+        if (n - 64 > 0) {
+            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+            TextComponent textComponentCenter = Component.text(CENTER_64.character);
+            Component textComponentCenterComponent = textComponentCenter.font(font);
+
+            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            n -= 64;
+        }
+        if (n - 32 > 0) {
+            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+            TextComponent textComponentCenter = Component.text(CENTER_32.character);
+            Component textComponentCenterComponent = textComponentCenter.font(font);
+
+            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            n -= 32;
+        }
+        if (n - 16 > 0) {
+            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+            TextComponent textComponentCenter = Component.text(CENTER_16.character);
+            Component textComponentCenterComponent = textComponentCenter.font(font);
+
+            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            n -= 16;
+        }
+        if (n - 8 > 0) {
+            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+            TextComponent textComponentCenter = Component.text(CENTER_8.character);
+            Component textComponentCenterComponent = textComponentCenter.font(font);
+
+            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            n -= 8;
+        }
+        if (n - 4 > 0) {
+            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+            TextComponent textComponentCenter = Component.text(CENTER_4.character);
+            Component textComponentCenterComponent = textComponentCenter.font(font);
+
+            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            n -= 4;
+        }
+        if (n - 2 > 0) {
+            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+            TextComponent textComponentCenter = Component.text(CENTER_2.character);
+            Component textComponentCenterComponent = textComponentCenter.font(font);
+
+            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            n -= 2;
+        }
+        if (n - 1 > 0) {
+            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+            TextComponent textComponentCenter = Component.text(CENTER_1.character);
+            Component textComponentCenterComponent = textComponentCenter.font(font);
+
+            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+        }
+
+        TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+        Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+
+        TextComponent finalText = Component.text(END.character);
+        Component finalComponent = finalText.font(font);
+
+        component = component.append(textComponentNegativeComponent).append(finalComponent).append(offsetComponent);
+
+
+        return component;
+    }
+
+
 }

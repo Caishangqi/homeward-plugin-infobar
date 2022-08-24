@@ -62,6 +62,7 @@ public class HUDManipulation {
         }
 
         List<String> displayPriorityByPlugin = invoke;
+
         DisplayPriority displayPriority = new DisplayPriority();
         displayPriorityByPlugin.forEach(K -> {
             HUDComponent hudComponent = new HUDComponent();

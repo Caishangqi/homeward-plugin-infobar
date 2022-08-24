@@ -29,19 +29,21 @@ public class HUDComponent {
         int totalWidth = FontWidth.getTotalWidth(placeholders);
 
         String shortestNegChars = FontNegative.getShortestNegChars(totalWidth);
-        String backGround = FontBackGround.getBackGround(totalWidth);
+        //String backGround = FontBackGround.getBackGround(totalWidth);
+
 
         Key boss_bar = Key.key("boss_bar_1");
         Key aDefault = Key.key("default");
 
-        TextComponent backGroundComponent = Component.text(backGround).color(TextColor.color(255, 254, 253));
-        Component backGroundComponentWithFont = backGroundComponent.font(boss_bar);
+        Component backGround = FontBackGround.getBackGround(totalWidth, boss_bar, aDefault);
+        backGround = backGround.color(TextColor.color(255, 254, 253));
 
 
-        TextComponent negativeComponent = Component.text(shortestNegChars);
-        Component negativeComponentWithFont = negativeComponent.font(aDefault);
+        TextComponent placeholderText = Component.text(placeholders);
+        placeholderText = placeholderText.color(TextColor.color(255, 255, 255));
+        return backGround.append(placeholderText);
 
-        return Component.text(placeholders).append(negativeComponentWithFont).append(backGroundComponentWithFont);
+        //return Component.text(placeholders).append(negativeComponentWithFont).append(backGround);
 
     }
 
