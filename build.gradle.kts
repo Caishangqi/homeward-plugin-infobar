@@ -47,6 +47,7 @@ dependencies {
     ///fileTree(dir: 'libs/compile', include: ['*.jar'])
     compileOnly(fileTree("libs/compile"))
     compileOnly("me.clip:placeholderapi:2.11.2")
+    implementation("net.kyori:adventure-text-minimessage:4.11.0")
 
 
 

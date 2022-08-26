@@ -6,10 +6,8 @@ import lombok.NonNull;
 import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.audience.Audience;
 import net.kyori.adventure.bossbar.BossBar;
-import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
-import net.kyori.adventure.text.format.TextColor;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.Nullable;
 
@@ -49,6 +47,8 @@ public class InfoHUD {
 
     public void refreshHUD(Player player) {
         HUDComponent componentToShow = null;
+        HUDComponent timeModel = new HUDComponent();
+        timeModel.setContent("%player_world_time_12%");
 
         for (HUDComponent component : HomewardInfoBar.hudManager.getDisplayPriority().getLoadSequence()) {
             if (component.canParse(player)) {
@@ -59,15 +59,16 @@ public class InfoHUD {
 
         if (componentToShow != null) {
 
-            String papi = componentToShow.getContent() + "  " + "%player_world_time_12%";
-            String s = PlaceholderAPI.setPlaceholders(player, papi);
 
 
             //<color:#FFFEFD>
 
             Component renderResult = componentToShow.render(player);
+            Component timeRender = timeModel.render(player);
 
-            this.activeBar.name(renderResult);
+            TextComponent blank = Component.text("  ");
+
+            this.activeBar.name(renderResult.append(blank).append(timeRender));
         }
 
 

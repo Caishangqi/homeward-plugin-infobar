@@ -10,5 +10,5 @@ display-priority-by-plugin:
   - World
 display-priority-by-placeholder:
   - "%dungeons%"
-  - "%worldguard_region_name%"
+  - "<font:boss_bar_1>%worldguard_region_name%</font>"
   - "%player_world%"

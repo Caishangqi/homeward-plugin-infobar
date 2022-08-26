@@ -18,7 +18,7 @@ public enum FontBackGround {
 
 
     private final char character;
-    private static final int offset_x = 4;
+    private static final int offset_x = 8;
 
     FontBackGround(char character) {
         this.character = character;
@@ -87,84 +87,44 @@ public enum FontBackGround {
 
         if (n > 128) {
 
-            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
-            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
-
-            TextComponent textComponentCenter = Component.text(CENTER_128.character);
-            Component textComponentCenterComponent = textComponentCenter.font(font);
-
-            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            component = backGroundSplicing(component, FontNegative.NEG_1, CENTER_128, font, defaultFont);
 
             n -= 128;
         }
         if (n - 64 > 0) {
-            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
-            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
-
-            TextComponent textComponentCenter = Component.text(CENTER_64.character);
-            Component textComponentCenterComponent = textComponentCenter.font(font);
-
-            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            component = backGroundSplicing(component, FontNegative.NEG_1, CENTER_64, font, defaultFont);
             n -= 64;
         }
         if (n - 32 > 0) {
-            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
-            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
-
-            TextComponent textComponentCenter = Component.text(CENTER_32.character);
-            Component textComponentCenterComponent = textComponentCenter.font(font);
-
-            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            component = backGroundSplicing(component, FontNegative.NEG_1, CENTER_32, font, defaultFont);
             n -= 32;
         }
         if (n - 16 > 0) {
-            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
-            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
-
-            TextComponent textComponentCenter = Component.text(CENTER_16.character);
-            Component textComponentCenterComponent = textComponentCenter.font(font);
-
-            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            component = backGroundSplicing(component, FontNegative.NEG_1, CENTER_16, font, defaultFont);
             n -= 16;
         }
         if (n - 8 > 0) {
-            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
-            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
-
-            TextComponent textComponentCenter = Component.text(CENTER_8.character);
-            Component textComponentCenterComponent = textComponentCenter.font(font);
-
-            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            component = backGroundSplicing(component, FontNegative.NEG_1, CENTER_8, font, defaultFont);
             n -= 8;
         }
         if (n - 4 > 0) {
-            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
-            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
-
-            TextComponent textComponentCenter = Component.text(CENTER_4.character);
-            Component textComponentCenterComponent = textComponentCenter.font(font);
-
-            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            component = backGroundSplicing(component, FontNegative.NEG_1, CENTER_4, font, defaultFont);
             n -= 4;
         }
         if (n - 2 > 0) {
-            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
-            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
-
-            TextComponent textComponentCenter = Component.text(CENTER_2.character);
-            Component textComponentCenterComponent = textComponentCenter.font(font);
-
-            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+            component = backGroundSplicing(component, FontNegative.NEG_1, CENTER_2, font, defaultFont);
             n -= 2;
         }
         if (n - 1 > 0) {
-            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
-            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+            component = backGroundSplicing(component, FontNegative.NEG_1, CENTER_1, font, defaultFont);
 
-            TextComponent textComponentCenter = Component.text(CENTER_1.character);
-            Component textComponentCenterComponent = textComponentCenter.font(font);
-
-            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
+//            TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
+//            Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+//
+//            TextComponent textComponentCenter = Component.text(CENTER_1.character);
+//            Component textComponentCenterComponent = textComponentCenter.font(font);
+//
+//            component = component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
         }
 
         TextComponent textComponentNegative = Component.text(FontNegative.NEG_1.getCharacter());
@@ -177,6 +137,14 @@ public enum FontBackGround {
 
 
         return component;
+    }
+
+    private static Component backGroundSplicing(Component component, FontNegative fontNegative, FontBackGround fontBackGround, Key font, Key defaultFont) {
+        TextComponent textComponentNegative = Component.text(fontNegative.getCharacter());
+        Component textComponentNegativeComponent = textComponentNegative.font(defaultFont);
+        TextComponent textComponentCenter = Component.text(fontBackGround.character);
+        Component textComponentCenterComponent = textComponentCenter.font(font);
+        return component.append(textComponentNegativeComponent).append(textComponentCenterComponent);
     }
 
 

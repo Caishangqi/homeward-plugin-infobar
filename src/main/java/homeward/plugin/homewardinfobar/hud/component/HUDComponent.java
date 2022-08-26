@@ -9,12 +9,17 @@ import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
 import net.kyori.adventure.text.format.TextColor;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.entity.Player;
 
 public class HUDComponent {
 
     private String content;
     private ContentType type;
+
+    private Integer priority;
+
+    private Component serializedContent;
 
     public boolean canParse(Player player) {
         String papi = content;
@@ -23,6 +28,12 @@ public class HUDComponent {
     }
 
     public Component render(Player player) {
+
+        serializedContent = MiniMessage.miniMessage().deserialize(content);
+        TextComponent serializedContentText = (TextComponent) serializedContent;
+        //System.out.println(serializedContentText.content()); //%xxx%
+
+
 
         String placeholders = PlaceholderAPI.setPlaceholders(player, content);
 
