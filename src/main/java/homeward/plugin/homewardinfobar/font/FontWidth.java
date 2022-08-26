@@ -24,7 +24,6 @@ import java.util.Objects;
 public enum FontWidth {
 
 
-
     A('A', 5), a('a', 5), B('B', 5), b('b', 5),
     C('C', 5), c('c', 5), D('D', 5), d('d', 5),
     E('E', 5), e('e', 5), F('F', 5), f('f', 4),
@@ -52,28 +51,13 @@ public enum FontWidth {
     PERIOD('.', 1), COMMA(',', 1), SPACE(' ', 3),
     IN_BETWEEN(' ', 1), DEFAULT('默', 8);
 
+    public static HashMap<Character, Integer> fontWidth = new HashMap<>();
     private final char character;
     private final int length;
-    public static HashMap<Character, Integer> fontWidth = new HashMap<>();
 
     FontWidth(char character, int length) {
         this.character = character;
         this.length = length;
-    }
-
-    public char getCharacter() {
-        return this.character;
-    }
-
-    public int getLength() {
-        return this.length;
-    }
-
-    public int getBoldLength() {
-        if (this == FontWidth.SPACE) {
-            return this.getLength();
-        }
-        return this.getLength() + 1;
     }
 
     /*
@@ -99,5 +83,20 @@ public enum FontWidth {
             n += getInfo(s.charAt(i));
         }
         return n + length - 1; //总长还需加上字符间距
+    }
+
+    public char getCharacter() {
+        return this.character;
+    }
+
+    public int getLength() {
+        return this.length;
+    }
+
+    public int getBoldLength() {
+        if (this == FontWidth.SPACE) {
+            return this.getLength();
+        }
+        return this.getLength() + 1;
     }
 }

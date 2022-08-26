@@ -16,19 +16,20 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class HomewardInfoBar extends JavaPlugin {
 
-    //ꈁ
-    ///tellraw Caizii {"text":"ꈉ","font":"boss_bar_1"}
-    private static CommandManager commandManager;
-
+    private static final String pluginPrefix = "&5HInfo &f| ";
     public static CompatibilityManager compatibilityManager;
     public static FileConfiguration config;
     public static ConsoleLogger consoleLogger;
     public static CustomLogger customLogger;
-    private static final String pluginPrefix = "&5HInfo &f| ";
-
     public static HUDManager hudManager;
-
     public static HomewardInfoBar plugin;
+    //ꈁ
+    ///tellraw Caizii {"text":"ꈉ","font":"boss_bar_1"}
+    private static CommandManager commandManager;
+
+    public static HomewardInfoBar getInstance() {
+        return plugin;
+    }
 
     @Override
     public void onEnable() {
@@ -67,7 +68,6 @@ public final class HomewardInfoBar extends JavaPlugin {
         config = getConfig();
     }
 
-
     private void initializedComponents() {
         plugin = this;
         consoleLogger = new ConsoleLogger();
@@ -84,10 +84,6 @@ public final class HomewardInfoBar extends JavaPlugin {
 
         HUDManipulation.hiddenDisplayHUDForPlayer();
 
-    }
-
-    public static HomewardInfoBar getInstance() {
-        return plugin;
     }
 
     private void loadingScheduler() {

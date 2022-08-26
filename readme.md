@@ -16,13 +16,15 @@
 ## 介绍 Introduction
 
 Homeward InfoBar
-是一款能基于玩家所装的不同插件，可以依照配置的 **Placeholder** 优先级，来自定义显示在 **BossBar** 的内容，支持自定义 **Placeholder** 或者依照插件顺序加载 (详细请看wiki)
+是一款能基于玩家所装的不同插件，可以依照配置的 **Placeholder** 优先级，来自定义显示在 **BossBar** 的内容，支持自定义 **
+Placeholder** 或者依照插件顺序加载 (详细请看wiki)
 
 [//]: # (<p align="center">)
 
 [//]: # (  <img alt="cookingpot" src="https://user-images.githubusercontent.com/39553613/180586916-6fa340a1-f8c6-4fc4-ad34-d56a5e707ee8.gif">)
 
 [//]: # (</p>)
+
 ## 前置
 
 - [Homeward Libs 协调核心](https://github.com/Caishangqi/homeward-plugin-lib) `必要`

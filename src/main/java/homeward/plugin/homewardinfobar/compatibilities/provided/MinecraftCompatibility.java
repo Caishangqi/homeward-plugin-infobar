@@ -41,8 +41,4 @@ public class MinecraftCompatibility extends CompatibilityPlugin<Listener> {
     }
 
 
-
-
-
-
 }

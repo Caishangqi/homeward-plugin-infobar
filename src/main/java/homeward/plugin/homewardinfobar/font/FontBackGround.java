@@ -17,8 +17,8 @@ public enum FontBackGround {
     CENTER_128('\ua209');
 
 
-    private final char character;
     private static final int offset_x = 8;
+    private final char character;
 
     FontBackGround(char character) {
         this.character = character;

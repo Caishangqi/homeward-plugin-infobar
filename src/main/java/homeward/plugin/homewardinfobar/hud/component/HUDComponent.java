@@ -1,7 +1,6 @@
 package homeward.plugin.homewardinfobar.hud.component;
 
 import homeward.plugin.homewardinfobar.font.FontBackGround;
-import homeward.plugin.homewardinfobar.font.FontNegative;
 import homeward.plugin.homewardinfobar.font.FontWidth;
 import homeward.plugin.homewardinfobar.hud.ContentType;
 import me.clip.placeholderapi.PlaceholderAPI;
@@ -25,30 +24,13 @@ public class HUDComponent {
         TextComponent deserialize = (TextComponent) MiniMessage.miniMessage().deserialize(content);
         String s = PlaceholderAPI.setPlaceholders(player, deserialize.content());
 
-        /**
-         * 假设 <font:boss_bar_1>뀂 %worldguard_region_name%</font>
-         * papi没有数据 则 deserialize = 뀂 %worldguard_region_name%
-         * s = 뀂 ||||
-         *
-         *
-         */
-
-        //System.out.println(s + PlaceholderAPI.containsPlaceholders(s));
-
-
         //这个复杂逻辑基于需要给papi加上图标设计的，以及papi空值返回 "" 的特性设计的
         if (PlaceholderAPI.containsPlaceholders(s)) { //这代表根本就没有
             return false;
         } else if (deserialize.content().equals(s)) { //代表重复
             return false;
-        } else if (deserialize.content().contains(s)) {
-            return false;
-        } else {
-            return true;
-        }
+        } else return !deserialize.content().contains(s);
 
-
-        //return (!deserialize.content().equals(s) && !PlaceholderAPI.containsPlaceholders(s));
     }
 
     public Component render(Player player) {
@@ -68,10 +50,6 @@ public class HUDComponent {
 
         int totalWidth = FontWidth.getTotalWidth(placeholders);
 
-        //String shortestNegChars = FontNegative.getShortestNegChars(totalWidth);
-        //String backGround = FontBackGround.getBackGround(totalWidth);
-
-
         Key boss_bar = Key.key("boss_bar_1");
         Key aDefault = Key.key("default");
 
@@ -79,8 +57,6 @@ public class HUDComponent {
         backGround = backGround.color(TextColor.color(255, 254, 253));
 
         return backGround.append(component);
-
-        //return Component.text(placeholders).append(negativeComponentWithFont).append(backGround);
 
     }
 

@@ -51,7 +51,6 @@ public class HInfoCommand extends CommandBase {
         textComponent.setText("ꈈ");
 
 
-
         commandSender.spigot().sendMessage(textComponent);
     }
 
