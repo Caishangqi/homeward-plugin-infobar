@@ -8,5 +8,6 @@ description: A BossBar like infomation HUD that show location and other informat
 website: play.homeward.com
 depend:
   - Homewardlib
+  - ProtocolLib
 softdepend:
   - PlaceholderAPI
