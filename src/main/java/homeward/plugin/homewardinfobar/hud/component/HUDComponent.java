@@ -22,24 +22,53 @@ public class HUDComponent {
     private Component serializedContent;
 
     public boolean canParse(Player player) {
-        String papi = content;
-        String s = PlaceholderAPI.setPlaceholders(player, papi);
-        return (!papi.equals(s) && !s.isBlank());
+        TextComponent deserialize = (TextComponent) MiniMessage.miniMessage().deserialize(content);
+        String s = PlaceholderAPI.setPlaceholders(player, deserialize.content());
+
+        /**
+         * 假设 <font:boss_bar_1>뀂 %worldguard_region_name%</font>
+         * papi没有数据 则 deserialize = 뀂 %worldguard_region_name%
+         * s = 뀂 ||||
+         *
+         *
+         */
+
+        //System.out.println(s + PlaceholderAPI.containsPlaceholders(s));
+
+
+        //这个复杂逻辑基于需要给papi加上图标设计的，以及papi空值返回 "" 的特性设计的
+        if (PlaceholderAPI.containsPlaceholders(s)) { //这代表根本就没有
+            return false;
+        } else if (deserialize.content().equals(s)) { //代表重复
+            return false;
+        } else if (deserialize.content().contains(s)) {
+            return false;
+        } else {
+            return true;
+        }
+
+
+        //return (!deserialize.content().equals(s) && !PlaceholderAPI.containsPlaceholders(s));
     }
 
     public Component render(Player player) {
 
         serializedContent = MiniMessage.miniMessage().deserialize(content);
+        //这个是没有字体<>的
         TextComponent serializedContentText = (TextComponent) serializedContent;
-        //System.out.println(serializedContentText.content()); //%xxx%
+
+        //这个包含了其他的格式
+        String placeholders_0 = PlaceholderAPI.setPlaceholders(player, content);
+        Component component = MiniMessage.miniMessage().deserialize(placeholders_0);
+        //System.out.println(content);
 
 
-
-        String placeholders = PlaceholderAPI.setPlaceholders(player, content);
+        //这个是算阴影的
+        String placeholders = PlaceholderAPI.setPlaceholders(player, serializedContentText.content());
 
         int totalWidth = FontWidth.getTotalWidth(placeholders);
 
-        String shortestNegChars = FontNegative.getShortestNegChars(totalWidth);
+        //String shortestNegChars = FontNegative.getShortestNegChars(totalWidth);
         //String backGround = FontBackGround.getBackGround(totalWidth);
 
 
@@ -49,10 +78,7 @@ public class HUDComponent {
         Component backGround = FontBackGround.getBackGround(totalWidth, boss_bar, aDefault);
         backGround = backGround.color(TextColor.color(255, 254, 253));
 
-
-        TextComponent placeholderText = Component.text(placeholders);
-        placeholderText = placeholderText.color(TextColor.color(255, 255, 255));
-        return backGround.append(placeholderText);
+        return backGround.append(component);
 
         //return Component.text(placeholders).append(negativeComponentWithFont).append(backGround);
 

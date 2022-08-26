@@ -1,4 +1,4 @@
-version: 1.0.0
+version: 1.0.2
 general-setting:
   auto-enable-hud: true
   auto-download-basic-papi-expansion: false
@@ -10,5 +10,5 @@ display-priority-by-plugin:
   - World
 display-priority-by-placeholder:
   - "%dungeons%"
-  - "<font:boss_bar_1>%worldguard_region_name%</font>"
-  - "%player_world%"
+  - '<font:boss_bar_1><color:#FFFEFD>뀂 %worldguard_region_name%</font>'
+  - '<font:boss_bar_1><color:#FFFEFD>뀂 %player_world%</font>'

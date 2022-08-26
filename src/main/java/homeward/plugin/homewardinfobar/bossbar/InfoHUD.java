@@ -3,7 +3,6 @@ package homeward.plugin.homewardinfobar.bossbar;
 import homeward.plugin.homewardinfobar.HomewardInfoBar;
 import homeward.plugin.homewardinfobar.hud.component.HUDComponent;
 import lombok.NonNull;
-import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.audience.Audience;
 import net.kyori.adventure.bossbar.BossBar;
 import net.kyori.adventure.text.Component;
@@ -48,7 +47,7 @@ public class InfoHUD {
     public void refreshHUD(Player player) {
         HUDComponent componentToShow = null;
         HUDComponent timeModel = new HUDComponent();
-        timeModel.setContent("%player_world_time_12%");
+        timeModel.setContent("<font:boss_bar_1><color:#FFFEFD>뀁 %player_world_time_12%</font>");
 
         for (HUDComponent component : HomewardInfoBar.hudManager.getDisplayPriority().getLoadSequence()) {
             if (component.canParse(player)) {
@@ -58,7 +57,6 @@ public class InfoHUD {
         }
 
         if (componentToShow != null) {
-
 
 
             //<color:#FFFEFD>
