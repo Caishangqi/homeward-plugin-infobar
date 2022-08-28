@@ -7,8 +7,10 @@ import me.clip.placeholderapi.PlaceholderAPI;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.TextComponent;
+import net.kyori.adventure.text.format.Style;
 import net.kyori.adventure.text.format.TextColor;
 import net.kyori.adventure.text.minimessage.MiniMessage;
+import net.kyori.adventure.text.serializer.gson.GsonComponentSerializer;
 import org.bukkit.entity.Player;
 
 public class HUDComponent {
@@ -36,6 +38,7 @@ public class HUDComponent {
     public Component render(Player player) {
 
         serializedContent = MiniMessage.miniMessage().deserialize(content);
+        serializedContent = serializedContent.applyFallbackStyle(Style.style(TextColor.color(255, 255, 255)));
         //这个是没有字体<>的
         TextComponent serializedContentText = (TextComponent) serializedContent;
 
@@ -56,6 +59,11 @@ public class HUDComponent {
         Component backGround = FontBackGround.getBackGround(totalWidth, boss_bar, aDefault);
         backGround = backGround.color(TextColor.color(255, 254, 253));
 
+        Component test = Component.text("뀂").font(boss_bar).color(TextColor.color(255, 254, 253));
+        test = test.append(Component.text("%worldguard_region_name%").font(aDefault).color(TextColor.color(255, 255, 255)));
+        final String json = GsonComponentSerializer.gson().serialize(test);
+
+        //System.out.println(json);
         return backGround.append(component);
 
     }

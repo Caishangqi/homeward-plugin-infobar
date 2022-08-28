@@ -39,6 +39,10 @@ repositories {
         name = "protocolLib"
         url = uri("https://repo.dmulloy2.net/repository/public/")
     }
+
+    maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots/") {
+        name = "sonatype-oss-snapshots"
+    }
 }
 
 dependencies {
@@ -52,6 +56,7 @@ dependencies {
     compileOnly("me.clip:placeholderapi:2.11.2")
     implementation("net.kyori:adventure-text-minimessage:4.11.0")
     compileOnly("com.comphenix.protocol:ProtocolLib:4.8.0")
+    implementation("net.kyori:adventure-text-serializer-gson:4.11.0")
 
 
 }

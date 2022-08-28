@@ -11,6 +11,7 @@ import homeward.plugin.homewardinfobar.compatibilities.provided.MinecraftCompati
 import homeward.plugin.homewardinfobar.hud.HUDManager;
 import homeward.plugin.homewardinfobar.scheduler.OnTickScheduler;
 import homeward.plugin.homewardinfobar.util.hudmanipulation.HUDManipulation;
+import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -41,6 +42,7 @@ public final class HomewardInfoBar extends JavaPlugin {
         initializeHUDManager();
         displayHUDForPlayer();
         loadingScheduler();
+        MiniMessage.builder().strict(true);
     }
 
     private void displayHUDForPlayer() {
